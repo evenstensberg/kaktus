@@ -1,0 +1,11 @@
+<div *ngFor="let item of arr; index as i" class="menu-item card">
+  <div class="flex-row">
+    <span class="badge bg-primary order-left">{{ item.category }}</span>
+    <img src="{{ item.src }}" width="40" height="40" />
+    <p class="order-price">{{ item.price }}</p>
+  </div>
+  <div class="card-body">
+    <p class="order-title">{{ item.title }}</p>
+    <p class="order-allergies">Allergener: ({{ item.allergies }})</p>
+  </div>
+</div>
