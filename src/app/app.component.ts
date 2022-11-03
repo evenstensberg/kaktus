@@ -170,7 +170,7 @@ export class AppComponent implements OnInit {
       price: '190,-',
       category: 'Fisk',
       title:
-        'Rish & Chips - panert torskefilet, sylteagurk, remulade og pommes frites',
+        'Fish & Chips - panert torskefilet, sylteagurk, remulade og pommes frites',
       allergies: '1, 3, 4, 10',
       src: 'assets/fishing.png',
     },
@@ -194,7 +194,7 @@ export class AppComponent implements OnInit {
       price: '190,-',
       category: 'Kjøtt',
       title:
-        'Biffsnadder - indrefilet, løk, chmampignons, paprika, pommes frites og bearnaise',
+        'Biffsnadder - indrefilet, løk, champignons, paprika, pommes frites og bearnaise',
       allergies: '3, 9, 10',
       src: 'assets/steak.png',
     },
@@ -374,7 +374,7 @@ export class AppComponent implements OnInit {
     {
       price: '135/230/260,-',
       category: 'Pizza',
-      title: 'Motana - skinke, pepperoni, salami og bacon',
+      title: 'Montana - skinke, pepperoni, salami og bacon',
       allergies: '1, 7, 9, 10',
       src: 'assets/pizza.png',
     },
@@ -437,7 +437,7 @@ export class AppComponent implements OnInit {
     {
       price: '135/230/260,-',
       category: 'Pizza',
-      title: 'Tinni - biff, skinke og ananas',
+      title: 'Tinini - biff, skinke og ananas',
       allergies: '1, 7, 9, 10',
       src: 'assets/pizza.png',
     },
