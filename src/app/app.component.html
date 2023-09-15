@@ -96,6 +96,19 @@
       >
         Pizza
       </button>
+
+      <button
+        class="rounded-pill btn btn-primary bg-primary text-light"
+        (click)="navigateToId('dessert')"
+      >
+        Dessert
+      </button>
+      <button
+        class="rounded-pill btn btn-primary bg-primary text-light"
+        (click)="navigateToId('drinks')"
+      >
+        Drikke
+      </button>
     </div>
   </div>
 
@@ -114,11 +127,11 @@
   <div class="tilb-container">
     <h4>Tilbehør</h4>
     <div>
-      <p>Ost - Allergener: (7) - <b>15,-</b></p>
-      <p>Bacon - <b>20</b>,-</p>
-      <p>Løkringer - Allergener: (1) - <b>20</b>,-</p>
-      <p>Mozarella sticks - Allergener: (1, 3, 7) - <b>25</b>,-</p>
-      <p>Chilli Cheese Pops - Allergener: (1, 3, 7) - <b>25</b>,-</p>
+      <p>Ost - Allergener: (7) - <b>20,-</b></p>
+      <p>Bacon - <b>30</b>,-</p>
+      <p>Løkringer - Allergener: (1) - <b>25</b>,-</p>
+      <p>Mozarella sticks - Allergener: (1, 3, 7) - <b>35</b>,-</p>
+      <p>Chilli Cheese Pops - Allergener: (1, 3, 7) - <b>35</b>,-</p>
     </div>
   </div>
 
@@ -130,8 +143,8 @@
   <div class="category-title">
     <h4>Saus styrke</h4>
     <div>
-      <p><b>Mild</b>: kun hvit saus - Allergener: (3,7, 9)</p>
-      <p><b>Medium</b>: hvit og rød saus - Allergener: (3,7, 9)</p>
+      <p><b>Mild</b>: kun hvit saus - Allergener: (3, 7, 9)</p>
+      <p><b>Medium</b>: hvit og rød saus - Allergener: (3, 7, 9)</p>
       <p><b>Sterk</b>: kun rød saus - Allergener: (9)</p>
     </div>
   </div>
@@ -153,7 +166,15 @@
     <h2 class="category-title" id="kjott">Kjøtt</h2>
     <app-list-item [arr]="Meats"></app-list-item>
   </div>
-  >
+  <div class="tilb-container">
+    <h4>Tilbehør</h4>
+    <div>
+      <p>Ekstra poteter <b>40,-</b></p>
+      <p>Løkringer - Allergener: (1) - <b>25</b>,-</p>
+      <p>Bacon <b>25</b>,-</p>
+      <p>Fløtegratinerte poteter - Allergener: (7, 9) - <b>40</b>,-</p>
+    </div>
+  </div>
   <div class="menu-category-container">
     <h2 class="category-title" id="barn">Barnemeny</h2>
     <app-list-item [arr]="Children"></app-list-item>
@@ -170,34 +191,56 @@
     <div class="tilb-container">
       <h4>Ektra tilbehør til Pizza</h4>
       <div>
-        <p>En ekstra ingrediens: <b>15</b>,-</p>
-        <p>Bearnaisesaus - Allergener: (3, 7): <b>15</b>,-</p>
-        <p>Hvitløksdressing - Allergener: (3, 7, 9): <b>15</b>,-</p>
-        <p>Rømmedressing - Allergener: (3, 7, 9): <b>15</b>,-</p>
+        <p>En ekstra ingrediens: <b>25</b>,-</p>
+        <p>Bearnaisesaus - Allergener: (3, 7): <b>20</b>,-</p>
+        <p>Hvitløksdressing - Allergener: (3, 7, 9): <b>20</b>,-</p>
+        <p>Rømmedressing - Allergener: (3, 7, 9): <b>20</b>,-</p>
       </div>
       <div>
-        <p>Pommesfrites til liten pizza: <b>20</b>,-</p>
-        <p>Pommesfrites til medium pizza: <b>30</b>,-</p>
-        <p>Pommesfrites til stor pizza: <b>40</b>,-</p>
+        <p>Pommesfrites til liten pizza: <b>30</b>,-</p>
+        <p>Pommesfrites til medium pizza: <b>40</b>,-</p>
+        <p>Pommesfrites til stor pizza: <b>50</b>,-</p>
       </div>
     </div>
+  </div>
 
-    <div class="scrollbar">
-      <button (click)="scrollToTop()" type="button" class="btn btn-primary">
-        Scroll til topp
-      </button>
+  <div class="menu-category-container">
+    <h2 class="category-title" id="dessert">Dessert</h2>
+    <app-list-item [arr]="Dessert"></app-list-item>
+  </div>
+
+  <div class="menu-category-container">
+    <h2 class="category-title" id="drinks">Drikke</h2>
+    <app-list-item [arr]="Drinks"></app-list-item>
+  </div>
+
+  <div class="allergies">
+    <h4 class="menu-title">Åpningstider</h4>
+    <div class="">
+      <p>Mandag: 11:00 - 22:00</p>
+      <p>Tirsdag: 11:00 - 22:00</p>
+      <p>Onsdag: 11:00 - 22:00</p>
+      <p>Torsdag: 11:00 - 22:00</p>
+      <p>Fredag: 11:00 - 23:00</p>
+      <p>Lørdag: 12:00 - 23:00</p>
+      <p>Søndag: 12:00 - 22:00</p>
     </div>
-    <div class="promotion-container">
-      <p>
-        Bygget av
-        <a
-          rel="noopener"
-          target="_blank"
-          href="https://www.linkedin.com/in/even-stensberg-9a4290214/"
-          >Even Stensberg</a
-        >
-        🧑🏾‍💻
-      </p>
-    </div>
+  </div>
+  <div class="scrollbar">
+    <button (click)="scrollToTop()" type="button" class="btn btn-primary">
+      Scroll til topp
+    </button>
+  </div>
+  <div class="promotion-container">
+    <p>
+      Bygget av
+      <a
+        rel="noopener"
+        target="_blank"
+        href="https://www.linkedin.com/in/even-stensberg-9a4290214/"
+        >Even Stensberg</a
+      >
+      🧑🏾‍💻
+    </p>
   </div>
 </div>
