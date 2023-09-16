@@ -146,7 +146,8 @@ export class AppComponent implements OnInit {
     {
       price: '195,-',
       category: 'Pasta',
-      title: 'Husets pasta - Penne, biffkjøtt, paprika, løk og fløtesaus',
+      title:
+        'Husets pasta - Penne, biffkjøtt, paprika, løk, tomat og fløtesaus',
       allergies: '1, 7, 9',
       src: 'assets/noodles.png',
     },
