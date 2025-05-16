@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// @ts-ignore
+import confetti from 'canvas-confetti';
 
 interface MenuItem {
   price?: string;
@@ -625,6 +627,38 @@ export class AppComponent implements OnInit {
     });
   }
   constructor() {}
+  celebrate() {
+    var duration = 4 * 1000;
+    var end = Date.now() + duration;
+    var scalar = 3;
+    var flag = confetti.shapeFromText({ text: '🇳🇴', scalar });
+    (function frame() {
+      // launch a few confetti from the left edge
+      confetti({
+        particleCount: 7,
+        angle: 60,
+        spread: 105,
+        origin: { x: 0 },
+        shapes: [flag],
+        scalar
+      });
+      // and launch a few from the right edge
+      confetti({
+        particleCount: 7,
+        angle: 120,
+        spread: 155,
+        origin: { x: 1 },
+        shapes: [flag],
+        scalar
+      });
 
-  ngOnInit(): void {}
+      // keep going until we are out of time
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
+  }
+  ngOnInit(): void {
+    this.celebrate()
+  }
 }
